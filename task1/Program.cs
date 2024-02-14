@@ -12,24 +12,27 @@ namespace MatricesAndStrings
             Console.Write("введите количесво столбцов в массиве:   ");
             int y = int.Parse(Console.ReadLine()!);
             char[,] symbols = new char[x, y];
+            Console.WriteLine("введите символ для заполнения массива:  ");
             for (int i = 0; i < x; i++)
             {
+                 
                 for (int j = 0; j < y; j++)
                 {
-                    Console.WriteLine("введите символ для заполнения массива:  ");
+                    
                     symbols[i, j] = char.Parse(Console.ReadLine()!);
                 }
             }
 
-            for (int i = 0; i < x; i++)
-            {
-                for (int j = 0; j < y; j++)
-                {
-                    Console.Write($"{symbols[i, j]} \t");
+            // for (int i = 0; i < x; i++)
+            // {
+            //     for (int j = 0; j < y; j++)
+            //     {
+            //         Console.Write($"{symbols[i, j]} \t");
 
-                }
-                Console.WriteLine();
-            }
+            //     }
+            //     Console.WriteLine();
+            // }
+            Console.Write("строка из символов:  ");
             string result = "";
             foreach (char element in symbols)
             {
@@ -38,7 +41,5 @@ namespace MatricesAndStrings
             Console.WriteLine(result);
 
         }
-
-
     }
 }
